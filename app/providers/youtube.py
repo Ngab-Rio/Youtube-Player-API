@@ -15,7 +15,7 @@ class YouTubeProvider:
     def search(self, query: str):
         with YoutubeDL(self.SEARCH_OPTIONS) as ydl:
             result = ydl.extract_info(
-                f"ytsearch30:{query} karaoke",
+                f"ytsearch90:{query} karaoke",
                 download=False
             )
         return result.get("entries", [])
